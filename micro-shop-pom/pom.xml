@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<!--1. 用户服务 (1.0.1)
+    - spring-context 6.0.6
+    - spring-core 6.0.6
+    - spring-beans 6.0.6
+    - jackson-databind /  jackson-core / jackson-annotations 2.15.0
+2. 订单服务 (1.0.1)
+    1. shiro-core 1.10.1
+    2. spring-context 6.0.6
+    3. spring-core 6.0.6
+    4. spring-beans 6.0.6
+3. 通用模块 (1.0.1)
+    1. commons-io 2.11.01. 用户服务 (1.0.1)
+    - spring-context 6.0.6
+    - spring-core 6.0.6
+    - spring-beans 6.0.6
+    - jackson-databind /  jackson-core / jackson-annotations 2.15.0
+2. 订单服务 (1.0.1)
+    1. shiro-core 1.10.1
+    2. spring-context 6.0.6
+    3. spring-core 6.0.6
+    4. spring-beans 6.0.6
+3. 通用模块 (1.0.1)
+    1. commons-io 2.11.0 -->
+
+
+    <groupId>com.zcm</groupId>
+    <artifactId>micro-shop-pom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--父工程不打包 -->
+    <packaging>pom</packaging>
+    <modules>
+        <module>user-service-war</module>
+        <module>order-service-war</module>
+        <module>common-servie-jar</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <!--自己声明的依赖-->
+            <dependency>
+                <groupId>com.zcm</groupId>
+                <artifactId>common-servie-jar</artifactId>
+                <version>${common-servie-jar.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+    <properties>
+            <spring.version>6.0.6</spring.version>
+            <jackson.version>2.15.0</jackson.version>
+            <commons-io.version>2.11.0</commons-io.version>
+            <shiro.version>1.10.1</shiro.version>
+        <common-servie-jar.version>1.0.1</common-servie-jar.version>
+    </properties>
+
+</project>

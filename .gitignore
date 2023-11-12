@@ -1,0 +1,4 @@
+# 项目排除路径
+/micro-shop-pom/common-servie-jar/target/
+/micro-shop-pom/order-service-war/target/
+/micro-shop-pom/user-service-war/target/
