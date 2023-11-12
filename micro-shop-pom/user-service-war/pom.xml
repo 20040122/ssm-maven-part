@@ -21,7 +21,7 @@
     </dependency>
     <dependency>
       <groupId>com.zcm</groupId>
-      <artifactId>common-servie-jar</artifactId>
+      <artifactId>common-service-jar</artifactId>
     </dependency>
   </dependencies>
 

@@ -36,7 +36,7 @@
     <modules>
         <module>user-service-war</module>
         <module>order-service-war</module>
-        <module>common-servie-jar</module>
+        <module>common-service-jar</module>
     </modules>
 
     <dependencyManagement>
